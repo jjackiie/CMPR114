@@ -70,10 +70,13 @@ for year in range(years):
     for months in range(12):
         rainfall_amount = int(input("Enter the rainfall amount for the month: "))
 
+        # adding two values and assigning it to a variable
         month += 1
 
+        # adding two values and assigning it to a variable
         rainfall += rainfall_amount
 
+        # calculating the average
         average = rainfall/month
 
 # display the number of months
@@ -144,7 +147,7 @@ numbers = int(input("Enter a positive number: "))
 
 # using a loop to enter a series of positive numbers
 while numbers >= 0:
-    # calculating the sum
+    # adding two values and assigning it to a variable
     total += numbers
     numbers = int(input("Enter a positive number: "))
 # if the user enters a negative number, the following will display
