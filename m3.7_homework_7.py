@@ -95,17 +95,47 @@ for i in range(20):
     # adding two values and assigning it to a variable
     total += number
 
-print("Low: %.2f" % min(numbers))
+# display the lowest number in the list
+print("\nLowest: %.2f" % min(numbers))
 
-print("High: %.2f" % max(numbers))
+# display the highest number in the list
+print("Highest: %.2f" % max(numbers))
 
+# display the total of the numbers in the list
 print("Total: %.2f" % total)
 
+# display the average of the numbers in the list
 print("Average: %.2f" % (total / 20.0))
 
 
 ''''
 =================== Output ===========================
+Enter number 1 of 20: 1
+Enter number 2 of 20: 2
+Enter number 3 of 20: 3
+Enter number 4 of 20: 4
+Enter number 5 of 20: 5
+Enter number 6 of 20: 6
+Enter number 7 of 20: 7
+Enter number 8 of 20: 8
+Enter number 9 of 20: 9
+Enter number 10 of 20: 11
+Enter number 11 of 20: 22
+Enter number 12 of 20: 33
+Enter number 13 of 20: 44
+Enter number 14 of 20: 55
+Enter number 15 of 20: 66
+Enter number 16 of 20: 77
+Enter number 17 of 20: 88
+Enter number 18 of 20: 99
+Enter number 19 of 20: 111
+Enter number 20 of 20: 222
 
+Lowest: 1.00
+Highest: 222.00
+Total: 873.00
+Average: 43.65
+
+Process finished with exit code 0
 
 '''
