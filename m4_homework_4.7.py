@@ -81,7 +81,7 @@ Process finished with exit code 0
 test_tup = ([17, 28], [93, 11], [20, 17])
 
 # converting the tuple to a list and
-# finding the sum of the elements in the list using the built-in
+# finding the sum of the elements in the list using the sum function
 total = [sum(t) for t in test_tup]
 
 # displaying the sum of all the integers in the tuple
