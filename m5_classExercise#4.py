@@ -1,5 +1,5 @@
 # ====================================
-# Attached: Class Exercise #3
+# Attached: Class Exercise #4
 # ====================================
 # File: Challenge #1
 # ====================================
@@ -51,9 +51,8 @@ Process finished with exit code 0
 
 '''
 
-
 # ====================================
-# Attached: Class Exercise #3
+# Attached: Class Exercise #4
 # ====================================
 # File: Challenge #2
 # ====================================
@@ -112,7 +111,7 @@ Process finished with exit code 0
 '''
 
 # ====================================
-# Attached: Class Exercise #3
+# Attached: Class Exercise #4
 # ====================================
 # File: Challenge #3
 # ====================================
@@ -150,7 +149,7 @@ Process finished with exit code 0
 '''
 
 # ====================================
-# Attached: Class Exercise #3
+# Attached: Class Exercise #4
 # ====================================
 # File: Challenge #4
 # ====================================
@@ -169,6 +168,7 @@ avg = 0
 
 
 def add(num1, num2, num3):
+    # using the global variable
     global total
     # calculating the total
     total = float(num1) + float(num2) + float(num3)
@@ -177,6 +177,7 @@ def add(num1, num2, num3):
 
 
 def average(num1, num2, num3):
+    # using the global variable
     global avg
     # calculating the average
     avg = (float(num1) + float(num2) + float(num3)) / 3
@@ -207,9 +208,8 @@ Process finished with exit code 0
 
 '''
 
-
 # ====================================
-# Attached: Class Exercise #3
+# Attached: Class Exercise #4
 # ====================================
 # File: Challenge #5
 # ====================================
@@ -241,6 +241,106 @@ print("The total salary is " + str(wage(hrs, hourly)))
 Enter your hours: 40
 Enter your hourly rate: 12
 The total salary is 480.0
+
+Process finished with exit code 0
+
+'''
+
+# ====================================
+# Attached: Class Exercise #4 (Part 2)
+# ====================================
+# File: Challenge #1
+# ====================================
+# Name: Kilometer Converter
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+
+# create a global variable
+miles = 0
+
+
+def convert(kilometers):
+    # using the global variable
+    global miles
+    # converting km to miles
+    miles = kilometers * 0.6214
+    return float(miles)
+
+
+# asking the user to enter the distance
+kilometers = float(input("Enter a distance in kilometers: "))
+
+# displaying the results after the conversion
+print("Miles = " + str(convert(kilometers)))
+
+''''
+=================== Output ===========================
+Enter a distance in kilometers: 111
+Miles = 68.9754
+
+Process finished with exit code 0
+
+'''
+
+# ====================================
+# Attached: Class Exercise #4 (Part 2)
+# ====================================
+# File: Challenge #2
+# ====================================
+# Name: Automobile Costs
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+
+# create a global variable
+monthly = 0
+annually = 0
+
+
+def month_cost():
+    # using the global variable
+    global monthly
+    # calculating the monthly cost
+    monthly = float(loan) + float(insurance) + float(gas) + float(tires) + float(maintenance)
+
+    return float(monthly)
+
+
+def annual_cost():
+    # using the global variable
+    global annually
+    # calculating the annually cost
+    annually = (float(loan) + float(insurance) + float(gas) + float(tires) + float(maintenance)) * 12
+
+    return float(annually)
+
+
+# asking the user their monthly expenses
+loan = float(input("Enter the monthly loan payment: $"))
+insurance = float(input("Enter the monthly insurance cost: $"))
+gas = float(input("Enter the monthly gas cost: $"))
+tires = float(input("Enter the monthly tires cost: $"))
+maintenance = float(input("Enter the monthly maintenance cost: $"))
+
+# displaying the total monthly cost
+print("\nThe total monthly automobile cost is " + str(month_cost()))
+
+# displaying the total monthly cost
+print("The total annually automobile cost is " + str(annual_cost()))
+
+''''
+=================== Output ===========================
+Enter the monthly loan payment: $506
+Enter the monthly insurance cost: $55
+Enter the monthly gas cost: $160
+Enter the monthly tires cost: $155
+Enter the monthly maintenance cost: $200
+
+The total monthly automobile cost is 1076.0
+The total annually automobile cost is 12912.0
 
 Process finished with exit code 0
 
