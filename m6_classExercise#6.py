@@ -196,7 +196,6 @@ Process finished with exit code 1
 
 '''
 
-
 # ====================================
 # Attached: Class Exercise #6
 # ====================================
@@ -207,7 +206,7 @@ Process finished with exit code 1
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-
+'''
 def main():
     num_emps = int(input("Enter the number of employee records: "))
 
@@ -245,7 +244,7 @@ def read():
 
 
 read()
-
+'''
 ''''
 =================== Output ===========================
 Enter the number of employee records: 1
@@ -260,6 +259,78 @@ Josh Richard
 101
 Finance
 
+
+Process finished with exit code 0
+
+'''
+
+# ====================================
+# Attached: Class Exercise #6
+# ====================================
+# File: Challenge #5
+# ====================================
+# Name: Transferring Info
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+import tkinter as tk
+from tkinter import messagebox
+
+win = tk.Tk()
+win.geometry("500x300")
+win.title("Customer Information")
+
+tk.Label(win, text="Enter the last name").grid(column=0, row=0)
+tk.Label(win, text="Enter the first name").grid(column=0, row=1)
+tk.Label(win, text="Enter the address").grid(column=0, row=2)
+tk.Label(win, text="Enter the city").grid(column=0, row=3)
+tk.Label(win, text="Enter the state").grid(column=0, row=4)
+tk.Label(win, text="Enter the zipcode").grid(column=0, row=5)
+
+
+def write():
+    text_file = open("m6_customers.txt", "a")
+    content = text_file.write("\nConfirmation: " + str(LN.get()) + "," + str(FN.get()) + ",\n" + str(AD.get()) + " " + str(C.get()) + "," + str(S.get()) + "," + str(ZIP.get()))
+    text_file.close()
+    messagebox.showinfo("information", "Data recorded")
+
+
+def quit():
+    messagebox.showinfo("information", "Thank you . . .")
+    win.destroy()
+
+
+def submit():
+    messagebox.showinfo("information", "entered: " + LN.get() + "," + FN.get() + AD.get() + "," + C.get() + "," + S.get() + "," + ZIP.get())
+
+
+LN = tk.StringVar()
+txtLastname = tk.Entry(win, width=12, textvariable=LN).grid(column=1, row=0)
+FN = tk.StringVar()
+txtFirstname = tk.Entry(win, width=12, textvariable=FN).grid(column=1, row=1)
+AD = tk.StringVar()
+txtAddress = tk.Entry(win, width=12, textvariable=AD).grid(column=1, row=2)
+C = tk.StringVar()
+txtCity = tk.Entry(win, width=12, textvariable=C).grid(column=1, row=3)
+S = tk.StringVar()
+txtState = tk.Entry(win, width=12, textvariable=S).grid(column=1, row=4)
+ZIP = tk.StringVar()
+txtZipcode = tk.Entry(win, width=12, textvariable=ZIP).grid(column=1, row=5)
+
+
+tk.Button(win, text="submit", command=submit).grid(column=1, row=7)
+
+tk.Button(win, text="quit", command=quit).grid(column=2, row=7)
+
+tk.Button(win, text="transfer", command=write).grid(column=3, row=7)
+
+win.mainloop()
+submit()
+
+
+''''
+=================== Output ===========================
 
 Process finished with exit code 0
 
