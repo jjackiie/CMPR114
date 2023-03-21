@@ -1,0 +1,8 @@
+
+The 1st number is 22
+The 2nd number is 33
+The 3rd number is 44
+
+The average number is 33.0
+
+The total number is 99
