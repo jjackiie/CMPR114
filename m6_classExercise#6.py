@@ -128,7 +128,6 @@ Process finished with exit code 0
 
 '''
 
-
 # ====================================
 # Attached: Class Exercise #6
 # ====================================
@@ -139,7 +138,7 @@ Process finished with exit code 0
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-
+'''
 def sales():
     num_days = int(input("Enter the days of sales: "))
     sales_files = open("m6_sales.txt", "a")
@@ -179,7 +178,7 @@ def readSales():
 
 
 readSales()
-
+'''
 ''''
 =================== Output ===========================
 Enter the days of sales: 5
@@ -194,5 +193,74 @@ Enter your salary: 80000
 The total is 88000.0
 
 Process finished with exit code 1
+
+'''
+
+
+# ====================================
+# Attached: Class Exercise #6
+# ====================================
+# File: Challenge #4
+# ====================================
+# Name: Records
+# ====================================
+# Programmer: Jacqueline Ceballos
+# Class: CMPR 114
+# ====================================
+
+def main():
+    num_emps = int(input("Enter the number of employee records: "))
+
+    emp_file = open("m6_employee.txt", "w")
+
+    for count in range(1, num_emps + 1):
+        print("Enter data for employee #", count)
+
+        name = input("Name: ")
+        id_num = input("ID #: ")
+        dept = input("Department: ")
+
+        emp_file.write(name + "\n")
+        emp_file.write(id_num + "\n")
+        emp_file.write(dept + "\n")
+
+        print()
+
+        emp_file.close()
+
+        print("Recorded!\n")
+
+
+main()
+
+
+def read():
+    infile = open("m6_employee.txt", "r")
+
+    fileContents = infile.read()
+
+    infile.close()
+
+    print(fileContents)
+
+
+read()
+
+''''
+=================== Output ===========================
+Enter the number of employee records: 1
+Enter data for employee # 1
+Name: Josh Richard
+ID #: 101
+Department: Finance
+
+Recorded!
+
+Josh Richard
+101
+Finance
+
+
+Process finished with exit code 0
 
 '''
