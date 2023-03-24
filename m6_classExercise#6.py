@@ -8,16 +8,21 @@
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-'''
+
+# this function will allow the user to write the input
 def write():
     print("----Enter your information----")
 
+    # asking the user to enter ir first, last name with their age
     firstName = input("Enter your first name: ")
     lastName = input("Enter your last name: ")
     age = input("Enter your age: ")
 
+    # writing to the default directory
+    # the letter a means to append
     info = open("m6_textFile_challenge1.txt", 'a')
 
+    # writing the contents to a file
     info.write(firstName + "\n")
     info.write(lastName + "\n")
     info.write(age + "\n")
@@ -30,6 +35,7 @@ def write():
 write()
 
 
+# this program will read from the file
 def read():
     infile = open("m6_textFile_challenge1.txt", "r")
 
@@ -41,7 +47,7 @@ def read():
 
 
 read()
-'''
+
 ''''
 =================== Output ===========================
 ----Enter your information----
@@ -60,6 +66,7 @@ Process finished with exit code 0
 
 '''
 
+
 # ====================================
 # Attached: Class Exercise #6
 # ====================================
@@ -70,17 +77,23 @@ Process finished with exit code 0
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-'''
+
+# this function will allow the user to write the input
 def writeNumbers():
+    # writing to the default directory
+    # the letter a means append
     outfile = open("m6_numbers.txt", "a")
-    
+
+    # asking the user to enter 3 digits
     num1 = int(input("Enter #1: "))
     num2 = int(input("Enter #2: "))
     num3 = int(input("Enter #3: "))
 
+    # calculating the total and the average
     sum = num1 + num2 + num3
     average = sum / 3
 
+    # writing the contents to a file
     outfile.write("The 1st number is " + str(num1) + "\n")
     outfile.write("The 2nd number is " + str(num2) + "\n")
     outfile.write("The 3rd number is " + str(num3) + "\n")
@@ -95,6 +108,7 @@ def writeNumbers():
 writeNumbers()
 
 
+# this program will read from the file
 def read():
     infile = open("m6_numbers.txt", "r")
 
@@ -106,7 +120,7 @@ def read():
 
 
 read()
-'''
+
 ''''
 =================== Output ===========================
 Enter #1: 22
@@ -128,6 +142,7 @@ Process finished with exit code 0
 
 '''
 
+
 # ====================================
 # Attached: Class Exercise #6
 # ====================================
@@ -138,14 +153,18 @@ Process finished with exit code 0
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-'''
+
 def sales():
     num_days = int(input("Enter the days of sales: "))
     sales_files = open("m6_sales.txt", "a")
 
+    # start with 1, and increment by 1 based on the input
     for count in range(1, num_days + 1):
+        # inside the loop because it's nested after the for loop
         sales = float(input("Enter the sales for Day #" + str(count) + ": "))
         sales_files.write(str(sales) + "\n")
+
+    # outside the loop, by indenting
     sales_files.close()
 
     print("Sales Recorded!")
@@ -167,6 +186,7 @@ def readSales():
 
     line = sales_file.readline()
 
+    # as long an empty string is NOT returned
     while line != " ":
         amount = float(line)
 
@@ -178,7 +198,7 @@ def readSales():
 
 
 readSales()
-'''
+
 ''''
 =================== Output ===========================
 Enter the days of sales: 5
@@ -206,7 +226,7 @@ Process finished with exit code 1
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-'''
+
 def main():
     num_emps = int(input("Enter the number of employee records: "))
 
@@ -244,7 +264,7 @@ def read():
 
 
 read()
-'''
+
 ''''
 =================== Output ===========================
 Enter the number of employee records: 1
@@ -274,13 +294,19 @@ Process finished with exit code 0
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
+
+# import the gui interface controls
 import tkinter as tk
 from tkinter import messagebox
 
+# create the window interface
 win = tk.Tk()
+# width x height in pixels
 win.geometry("500x300")
+# label for the title
 win.title("Customer Information")
 
+# labeling the widgets
 tk.Label(win, text="Enter the last name").grid(column=0, row=0)
 tk.Label(win, text="Enter the first name").grid(column=0, row=1)
 tk.Label(win, text="Enter the address").grid(column=0, row=2)
@@ -291,43 +317,70 @@ tk.Label(win, text="Enter the zipcode").grid(column=0, row=5)
 
 def write():
     text_file = open("m6_customers.txt", "a")
-    content = text_file.write("\nConfirmation: " + str(LN.get()) + "," + str(FN.get()) + ",\n" + str(AD.get()) + " " + str(C.get()) + "," + str(S.get()) + "," + str(ZIP.get()))
+    content = text_file.write("\nConfirmation: " + str(LN.get()) + "," + str(FN.get()) + ",\n" + str(AD.get()) + " "
+                              + str(C.get()) + "," + str(S.get()) + "," + str(ZIP.get()))
     text_file.close()
     messagebox.showinfo("information", "Data recorded")
 
 
 def quit():
     messagebox.showinfo("information", "Thank you . . .")
+    # closes the interfaces
     win.destroy()
 
 
+# function name
 def submit():
-    messagebox.showinfo("information", "entered: " + LN.get() + "," + FN.get() + AD.get() + "," + C.get() + "," + S.get() + "," + ZIP.get())
+    # display info
+    messagebox.showinfo("information",
+                        "entered: " + LN.get() + "," + FN.get() + AD.get() + "," + C.get() + "," + S.get() + "," + ZIP.get())
 
 
+# the StringVar() manages the entry widgets
 LN = tk.StringVar()
-txtLastname = tk.Entry(win, width=12, textvariable=LN).grid(column=1, row=0)
+# text entry widget
+tk.Entry(win, width=12, textvariable=LN).grid(column=1, row=0)
+
+# the StringVar() manages the entry widgets
 FN = tk.StringVar()
-txtFirstname = tk.Entry(win, width=12, textvariable=FN).grid(column=1, row=1)
+# text entry widget
+tk.Entry(win, width=12, textvariable=FN).grid(column=1, row=1)
+
+# the StringVar() manages the entry widgets
 AD = tk.StringVar()
-txtAddress = tk.Entry(win, width=12, textvariable=AD).grid(column=1, row=2)
+# text entry widget
+tk.Entry(win, width=12, textvariable=AD).grid(column=1, row=2)
+
+# the StringVar() manages the entry widgets
 C = tk.StringVar()
-txtCity = tk.Entry(win, width=12, textvariable=C).grid(column=1, row=3)
+# text entry widget
+tk.Entry(win, width=12, textvariable=C).grid(column=1, row=3)
+
+# the StringVar() manages the entry widgets
 S = tk.StringVar()
-txtState = tk.Entry(win, width=12, textvariable=S).grid(column=1, row=4)
+# text entry widget
+tk.Entry(win, width=12, textvariable=S).grid(column=1, row=4)
+
+# the StringVar() manages the entry widgets
 ZIP = tk.StringVar()
-txtZipcode = tk.Entry(win, width=12, textvariable=ZIP).grid(column=1, row=5)
+# text entry widget
+tk.Entry(win, width=12, textvariable=ZIP).grid(column=1, row=5)
 
-
+# command calls the click function
+# button widget
 tk.Button(win, text="submit", command=submit).grid(column=1, row=7)
 
+# command calls the quit function
+# button widget
 tk.Button(win, text="quit", command=quit).grid(column=2, row=7)
 
+# command calls the function write
+# button widget
 tk.Button(win, text="transfer", command=write).grid(column=3, row=7)
 
+# ensures the interfaces stays on the screen or window
 win.mainloop()
 submit()
-
 
 ''''
 =================== Output ===========================
@@ -335,3 +388,4 @@ submit()
 Process finished with exit code 0
 
 '''
+
