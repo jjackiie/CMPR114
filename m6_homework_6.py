@@ -8,7 +8,7 @@
 # Programmer: Jacqueline Ceballos
 # Class: CMPR 114
 # ====================================
-'''
+
 # this function will allow the user to write the input
 def write():
     # assigning the variables
@@ -32,7 +32,7 @@ def write():
 
 
 write()
-'''
+
 ''''
 =================== Output ===========================
 
