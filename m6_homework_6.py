@@ -31,6 +31,7 @@ def write():
     print("\nInfo recorded! \n")
 
 
+# calling the write function
 write()
 
 ''''
@@ -66,6 +67,7 @@ def read():
     print(fileContents)
 
 
+# calling the read function
 read()
 
 ''''
@@ -93,13 +95,12 @@ Process finished with exit code 0
 
 # this function will allow the user to write the input
 def write():
-
     # writing to the default directory
     # the letter a means to append
     info = open("number_list.txt", 'a')
 
     # writing the contents to a file
-    for i in range(1,101):
+    for i in range(1, 101):
         info.write(str(i))
         info.write("\n")
 
@@ -109,6 +110,7 @@ def write():
     print("Number Written! \n")
 
 
+# calling the write function
 write()
 
 ''''
@@ -132,22 +134,33 @@ Process finished with exit code 0
 # Class: CMPR 114
 # ====================================
 
-# this program will read from the file
-def read():
+def main():
+
+    # assigning variables
+    count = 0
+    total = 0
+
+    # writing to the default directory
+    #  r means it will read from the file
     infile = open("numbers.txt", "r")
 
-    fileContents = infile.read()
+    # using a for loop to calculate the total in the file
+    for line in infile:
+        number = float(line)
+        count += 1
+        total += number
 
-    infile.close()
+    # displaying the total
+    print("The total in 'number.txt' is: %.0f" % total)
 
-    print(fileContents)
 
-
-read()
-
+# calling the main function
+main()
 
 ''''
 =================== Output ===========================
+The total in 'number.txt' is: 5500
 
+Process finished with exit code 0
 
 '''

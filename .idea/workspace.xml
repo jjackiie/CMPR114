@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ec5b20d-f0fb-47e2-a329-ea15798adc16" name="Changes" comment="Homework 6">
+      <change afterPath="$PROJECT_DIR$/numbers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/m6_classExercise#6.py" beforeDir="false" afterPath="$PROJECT_DIR$/m6_classExercise#6.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/m6_homework_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/m6_homework_6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/number_list.txt" beforeDir="false" afterPath="$PROJECT_DIR$/number_list.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/things.txt" beforeDir="false" afterPath="$PROJECT_DIR$/things.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679698167500</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Homework 6">
+      <created>1679698552145</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1679698552145</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

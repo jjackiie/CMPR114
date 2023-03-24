@@ -250,6 +250,7 @@ def main():
         print("Recorded!\n")
 
 
+# calling the main function
 main()
 
 
