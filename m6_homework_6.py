@@ -132,31 +132,22 @@ Process finished with exit code 0
 # Class: CMPR 114
 # ====================================
 
-# this function will allow the user to write the input
-def write():
+# this program will read from the file
+def read():
+    infile = open("numbers.txt", "r")
 
-    # writing to the default directory
-    # the letter a means to append
-    info = open("number_list.txt", 'a')
+    fileContents = infile.read()
 
-    # writing the contents to a file
-    for i in range(1,101):
-        info.write(str(i))
-        info.write("\n")
+    infile.close()
 
-    # closes the file
-    info.close()
-
-    print("Number Written! \n")
+    print(fileContents)
 
 
-write()
+read()
+
 
 ''''
 =================== Output ===========================
-Number Written! 
 
-
-Process finished with exit code 0
 
 '''

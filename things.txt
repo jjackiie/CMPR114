@@ -1,3 +1,9 @@
 panda
 apple
 africa
+panda
+apple
+africa
+panda
+apple
+africa

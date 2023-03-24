@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ec5b20d-f0fb-47e2-a329-ea15798adc16" name="Changes" comment="Class Exercise 6">
-      <change afterPath="$PROJECT_DIR$/m6_homework_6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/number_list.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/things.txt" afterDir="false" />
+    <list default="true" id="8ec5b20d-f0fb-47e2-a329-ea15798adc16" name="Changes" comment="Homework 6">
+      <change beforePath="$PROJECT_DIR$/m6_homework_6.py" beforeDir="false" afterPath="$PROJECT_DIR$/m6_homework_6.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +321,28 @@
       <option name="project" value="LOCAL" />
       <updated>1679696144053</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Class Exercise 6">
+      <created>1679698066787</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1679698066788</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Homework 6">
+      <created>1679698120041</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679698120041</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Homework 6">
+      <created>1679698167499</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1679698167500</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -347,6 +366,7 @@
     <MESSAGE value="class exercise #4" />
     <MESSAGE value="Homework #5" />
     <MESSAGE value="Class Exercise 6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class Exercise 6" />
+    <MESSAGE value="Homework 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework 6" />
   </component>
 </project>
